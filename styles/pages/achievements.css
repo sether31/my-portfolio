@@ -1,0 +1,149 @@
+@import '../utils/utilities.css';
+
+/* *{
+    border: 1px dashed red;
+} */
+
+#achievements{
+    padding-block: calc(var(--mt) - 3rem);
+}
+
+.achievements .container-lg .header{
+    font-size: var(--text-xl);
+    padding-left: var(--pX);
+}
+
+.achievements .container-lg .wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: var(--pX);
+} 
+
+.achievements .container-lg .wrapper .skills{
+    flex-basis: 40%;
+}
+
+.achievements .container-lg .wrapper .awards{
+    flex-basis: 50%;
+}
+
+.achievements .container-lg .wrapper :where(.skills .heading, .achievements .heading){
+    margin-top: 2rem;
+    font-size: var(--text-lg);
+}
+
+
+/* skills */
+
+.achievements .container-lg .wrapper .skills .card{
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+    gap: 1rem;
+} 
+
+.achievements .container-lg .wrapper .skills .skillset .sub-heading{
+    margin-block: 1rem;
+    font-size: var(--text-sm);
+    font-weight: var(--fw-600);
+}
+
+.achievements .container-lg .wrapper .skills .card-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .3rem;
+    font-size: var(--text-xl-sm);
+    background-color: var(--secondary);
+    color: var(--primary);
+    text-align: center;
+    padding: .5rem;
+    border-radius: .5rem;
+
+    img{
+        width: 40%;
+    }
+}
+
+/* awards */
+
+.achievements .container-lg .wrapper .awards nav{
+    margin-block: 1rem;
+}
+
+.achievements .container-lg .wrapper .awards nav ul {
+    display: flex;
+    gap: 1rem;
+}
+
+.achievements .container-lg .wrapper .awards nav ul li{
+    font-weight: var(--fw-600);
+}
+
+/* card */
+
+
+.achievements .achievement-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 200px;
+    gap: 1rem;
+}
+
+.achievements .achievement-content .card{
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: .5rem;
+    border-radius: .5rem; 
+}
+
+/* .achievements .achievement-content:hover .card:not(:hover){
+    filter:;
+    transition: 0.3s ease-in-out;
+} */
+
+.achievements .achievement-content .card .content{
+    flex-basis: 80%;
+}
+
+.achievements .achievement-content .card .card-pic{
+    flex-basis: 40%;
+    aspect-ratio: 1;
+    align-self: center;
+}
+
+.achievements .achievement-content .card .card-pic:hover img{
+    transition: .3s ease-in-out;
+    transform: rotate(-25deg);
+}
+
+.achievements .achievement-content .card .title{
+    font-weight: var(--fw-600);
+}
+
+.achievements .achievement-content .card .who{
+    margin-block: .3rem .8rem;
+    font-size: var(--text-x-sm)
+}
+
+.achievements .achievement-content .card a{
+    color: var(--primary);
+    font-size: var(--text-x-sm);
+    transition: .3s ease-in-out;
+    margin-top: 1rem;
+}
+
+.achievements .achievement-content .card a:hover{
+    color: var(--accent);
+}
+
+
+/* .achievements .achievement-content .card:nth-child(3){
+    grid-column: span 2;
+} */
+
+
+ 

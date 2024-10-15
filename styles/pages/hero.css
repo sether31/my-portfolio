@@ -1,0 +1,134 @@
+/* hero section */
+
+.hero-section{
+    margin: var(--mt) auto calc(var(--mt) - 2rem);
+    padding-inline: var(--pX);
+}
+
+:where(.hero-section, .hero-text){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.hero-section .hero-text .introduction{
+    font-size: var(--text-md);
+    font-weight: var(--fw-700);
+}
+
+.hero-section .hero-text .name{
+    font-size: var(--text-big);
+    font-weight: var(--fw-700);
+
+    letter-spacing: -8px;
+}
+
+.hero-section .hero-text .description{
+    font-size: var(--sec-header);
+    font-family: var(--ff-odibee);
+    font-weight: var(--fw-600);
+}
+
+.hero-section .cta{
+    margin-top: 1rem;
+    display: flex;
+    gap:1rem;
+}
+
+.hero-section .hero-text .name span:nth-child(5){
+    margin-right: 15px;
+}
+
+
+
+/* media queries */
+
+@media screen and (max-width: 900px) {
+    .hero-section .hero-text .name{
+        letter-spacing: -5px;
+    }
+
+    .hero-section .hero-text .name span:nth-child(5){
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    :root{
+        --pX: 2rem;
+        --mt: 10rem;
+    } 
+
+    .hero-section, .hero-text{
+        text-align: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    
+
+    /* .hero-section .hero-text .name{
+        letter-spacing: -3px;
+    } */
+
+    .hero-section .hero-text .name span:nth-child(5){
+        margin-right: 5px;
+
+        display: block;
+    }
+
+}
+
+
+
+
+
+
+
+/* letter animation */
+
+.bounce{
+    animation-name: bounce; 
+}
+
+.hero-section .hero-text .name span{
+    animation-timing-function: linear; 
+    animation-duration: 1s; 
+    animation-iteration-count: 1; 
+    display: inline-block; 
+}
+
+@keyframes bounce { 
+  
+    20%, 
+    50%, 
+    80%, 
+    to { 
+        transform: scale(1, 1); 
+    } 
+
+    40% { 
+        transform: scale(1.75, 0.65); 
+    } 
+
+    45% { 
+        transform: scale(1.75, 0.65); 
+    } 
+
+    70% { 
+        transform: scale(1.25, 0.75); 
+    } 
+
+    90% { 
+        transform: scale(1.15, 0.85); 
+    } 
+} 
+
+
+
+/* .primary:has(.icon) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */

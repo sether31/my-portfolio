@@ -1,0 +1,8 @@
+/* utilities */
+@import './styles/utils/utilities.css';
+/* header */
+@import './styles/share-styles/header.css';
+/* pages */
+@import './styles/pages/hero.css';
+@import './styles/pages/about.css';
+@import './styles/pages/achievements.css';

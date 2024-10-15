@@ -1,0 +1,170 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Odibee+Sans&display=swap');
+
+
+@font-face {
+    font-family: myFont;
+    src: url(../fonts/GODOFWAR.TTF);
+}
+
+@font-face {
+    font-family: myFont2;
+    src: url(../fonts/deathmohawk.otf);
+}
+
+@font-face {
+    font-family: cocoa;
+    src: url(../fonts/cocoa.otf);
+}
+
+@font-face {
+    font-family: isabela;
+    src: url(../fonts/isabela.otf);
+}
+
+@font-face {
+    font-family: knockbold;
+    src: url(../fonts/knockbold.otf);
+}
+
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+:root{
+    /* colors */
+    /* #CBCBCB */
+    --primary: #CBCBCB;
+    --secondary: #2E373A;
+
+    /* --accent: hsl(322, 100%, 66%); */
+    --accent:#030453;
+    --accent-hover: hsl(321, 100%, 78%);
+    --invalid: hsl(0, 100%, 63%);
+
+
+    /* font-family */
+    --ff-poppins: "Poppins", sans-serif;
+    --ff-roboto: "Poppins", sans-serif;
+
+    --ff-playfair: "Playfair Display", serif;
+    --ff-opensans: "Open Sans", sans-serif;
+
+    --ff-libre: "Libre Baskerville", sans-serif;
+    --ff-odibee: "Odibee Sans", sans-serif;
+
+
+    /* font-size */
+    --text-xl-sm: 0.75rem;
+    --text-x-sm: 0.875rem;
+    --text-sm: 1rem;
+    --text-md: 1.25rem;
+    --text-lg: 2rem;
+    --text-xl: 2.5rem;
+    --text-xxl: 3rem;
+    --sec-header: clamp(2rem, 1.6364rem + 1.8182vw, 3rem);
+    --text-big: clamp(2.3rem, 1.3182rem + 4.9091vw, 5rem);
+
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+    --fw-800: 800;
+
+    /* spacing */
+    --mt: 8rem;
+    --pX: 3rem;
+}
+
+/* body */
+body{
+    background-color: #CBCBCB;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23111111' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23030453'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+    color: var(--secondary);
+    font: var(--fw-400) var(--text-sm) var(--ff-poppins);
+    line-height: 1.5;
+    overflow-x:hidden;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--ff-poppins);
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: var(--secondary);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* class utilities */
+
+.container-md{
+    width: min(880px, 100vw);
+    margin-inline: auto;
+}
+
+.container-lg{
+    width: min(1200px, 100vw);
+    margin-inline: auto;
+}
+
+.highlight{
+    color: var(--accent);
+}
+
+
+/* buttons */
+
+.btn{
+    font: var(--fw-500) var(--text-sm) var(--ff-poppins) ;
+    color: var(--primary);
+    width: max-content;
+
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+}
+
+.primary-btn{
+    background-color: var(--secondary);
+}
+
+.secondary-btn{
+    color: var(--secondary);
+    background-color: #dddddd;
+}
+
+.icon{
+    width: var(--text-md);
+    align-self: center;
+}
+
+
+/* education */
+

@@ -1,0 +1,142 @@
+/* header */
+
+header{
+    position: sticky;
+    top: 0;
+    /* margin-top: calc(var(--mt) - 1.5rem); */
+    padding-block: 1rem;
+    background: rgba(203, 203, 203, .1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+}
+
+header .container-lg{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: var(--pX);
+    gap: 0.5rem;
+}
+
+#hamburger{
+    display: none;
+} 
+
+header .container-lg nav .nav-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+header .container-lg nav .nav-link a{
+    padding: 1rem;
+    font-size: var(--text-sm);
+    font-weight: var(--fw-600);
+    letter-spacing: .15rem;
+}
+
+
+@media screen and (max-width: 900px) {
+    header nav{
+        display: none;
+    }
+
+    header{
+        position: fixed;
+        top: 0;
+        margin-top: 0;
+    }
+
+    #hamburger-toggle{
+        height: 55px;
+        aspect-ratio: 1;
+        border-radius: 1rem;
+        position: relative;
+        transition: .3s ease;
+    }
+
+    #hamburger-toggle span{
+        position: absolute;
+        height: 5px;
+        width: 80%;
+        border-radius: 2px;
+        background-color: var(--secondary);
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #hamburger-toggle span:nth-child(1){
+        top: 25%;
+        transition: .3s ease;
+    }
+    
+    #hamburger-toggle span:nth-child(2){
+        width: 60%;
+    }
+    
+    #hamburger-toggle span:nth-child(3){
+        top: 75%;
+        transition: .3s ease;
+    }
+
+    /* for header bg */
+
+    /* header:has(#hamburger:checked){
+        background-color: var(--primary);
+    }
+
+    header:has(#hamburger:checked) .dark-logo{
+        display: none;
+    }
+
+    header:has(#hamburger:checked) .light-logo{
+        display: block;
+    } */
+
+    /* for toggle */
+
+    #hamburger:checked ~ #hamburger-toggle span:nth-child(1){
+        top: 50%;
+        transform: translate(-50%,-50%) rotate(45deg);
+        background-color: red;
+    }
+
+    #hamburger:checked ~ #hamburger-toggle span:nth-child(2){
+        background: transparent;
+    }
+
+    #hamburger:checked ~ #hamburger-toggle span:nth-child(3){
+        top: 50%;
+        transform: translate(-50%,-50%) rotate(-45deg);
+        background-color: red;
+    }
+
+
+    /* nav-list pop */
+
+    #hamburger:checked ~ nav{
+        display: block;
+        background-color: red;
+        color: inherit;
+        width: 100%;
+        height: calc(100vh - 90px);
+        padding: 2rem 5rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 100;
+        overflow: hidden;
+    }
+
+    #hamburger:checked ~ nav .nav-list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;     
+    }
+
+    #hamburger:checked ~ nav .nav-list .nav-link{
+        padding: 2rem;
+    }
+}
