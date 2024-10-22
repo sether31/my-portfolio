@@ -9,7 +9,7 @@ const skills = [
     {
         id: '2',
         link: 'https://www.w3schools.com/css/default.asp',
-        image: '../../assets/icons/css3_icon.svg',
+        image: '../../assets/icons/CSS3_icon.svg',
         name: 'CSS3',
         animationDuration: '1100'
     },
@@ -23,7 +23,7 @@ const skills = [
     {
         id: '4',
         link: 'https://www.w3schools.com/git/default.asp',
-        image: '../../assets/icons/GIT_icon.svg',
+        image: '../../assets/icons/git_icon.svg',
         name: 'Git',
         animationDuration: '1200'
     },
