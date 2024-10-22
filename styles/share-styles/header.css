@@ -3,7 +3,6 @@
 header{
     position: sticky;
     top: 0;
-    /* margin-top: calc(var(--mt) - 1.5rem); */
     padding-block: 1rem;
     background: rgba(203, 203, 203, .1);
     -webkit-backdrop-filter: blur(10px);
@@ -15,7 +14,7 @@ header .container-lg{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-inline: var(--pX);
+    padding-inline: var(--pX); 
     gap: 0.5rem;
 }
 
@@ -26,13 +25,21 @@ header .container-lg{
 header .container-lg nav .nav-list{
     display: flex;
     justify-content: space-between;
+    gap: 0.3rem;
 }
 
 header .container-lg nav .nav-link a{
     padding: 1rem;
+    border-radius: 0.5rem;
     font-size: var(--text-sm);
     font-weight: var(--fw-600);
     letter-spacing: .15rem;
+    transition: var(--trans-300ms) var(--ease-in-out);
+}
+
+header .container-lg nav .nav-link a:hover{
+    background-color: var(--accent);
+    color: var(--primary);
 }
 
 
@@ -82,24 +89,28 @@ header .container-lg nav .nav-link a{
 
     /* for header bg */
 
-    /* header:has(#hamburger:checked){
-        background-color: var(--primary);
+    header:has(#hamburger:checked){
+        background-color: var(--secondary);
     }
 
-    header:has(#hamburger:checked) .dark-logo{
+    header:has(#hamburger:checked) .logo a{
+        color: var(--primary);
+    }
+
+    /* header:has(#hamburger:checked) .dark-logo{
         display: none;
     }
 
     header:has(#hamburger:checked) .light-logo{
         display: block;
-    } */
+    }  */
 
     /* for toggle */
 
     #hamburger:checked ~ #hamburger-toggle span:nth-child(1){
         top: 50%;
         transform: translate(-50%,-50%) rotate(45deg);
-        background-color: red;
+        background-color: var(--primary);
     }
 
     #hamburger:checked ~ #hamburger-toggle span:nth-child(2){
@@ -109,7 +120,7 @@ header .container-lg nav .nav-link a{
     #hamburger:checked ~ #hamburger-toggle span:nth-child(3){
         top: 50%;
         transform: translate(-50%,-50%) rotate(-45deg);
-        background-color: red;
+        background-color: var(--primary);
     }
 
 
@@ -117,10 +128,9 @@ header .container-lg nav .nav-link a{
 
     #hamburger:checked ~ nav{
         display: block;
-        background-color: red;
-        color: inherit;
+        background-color: var(--secondary);
         width: 100%;
-        height: calc(100vh - 90px);
+        height: calc(100vh - 83px);
         padding: 2rem 5rem;
         position: absolute;
         top: 100%;
@@ -138,5 +148,9 @@ header .container-lg nav .nav-link a{
 
     #hamburger:checked ~ nav .nav-list .nav-link{
         padding: 2rem;
+    }
+
+    #hamburger:checked ~ nav .nav-list .nav-link a{
+        color: var(--primary);
     }
 }

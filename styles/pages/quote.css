@@ -1,0 +1,48 @@
+.quote{
+    padding-block: calc(var(--mt)) calc(var(--mt) - 2rem);
+    margin: 3rem auto 0;
+}
+
+.quote{
+    position: relative;
+    padding-inline: var(--pX);
+}
+
+.quote::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background-image: url('../../assets/background/bg_quote.svg');
+}
+
+.quote .content{
+    width: 80%;
+    margin-inline: auto;
+}
+
+.quote .content q{
+    font-size: clamp(1.3rem, 0.8636rem + 2.1818vw, 2.5rem);;
+    padding-inline: 2rem;
+}
+
+.quote .content p{
+    font-size: var(--text-md);
+    text-align: center;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+
+    .quote{
+        padding-block: calc(var(--mt) + 5rem) 8rem;
+    }
+
+    .quote::before{
+        top: 5rem;
+        width: 150px;
+        height: 150px;
+    }
+}

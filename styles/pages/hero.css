@@ -1,5 +1,3 @@
-/* hero section */
-
 .hero-section{
     margin: var(--mt) auto calc(var(--mt) - 2rem);
     padding-inline: var(--pX);
@@ -52,6 +50,15 @@
     .hero-section .hero-text .name span:nth-child(5){
         margin-right: 10px;
     }
+
+    .hero-section, .hero-text{
+        text-align: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    /* may nawala na delete ko */
+
 }
 
 @media screen and (max-width: 768px) {
@@ -66,12 +73,6 @@
         gap: 1rem;
     }
 
-    
-
-    /* .hero-section .hero-text .name{
-        letter-spacing: -3px;
-    } */
-
     .hero-section .hero-text .name span:nth-child(5){
         margin-right: 5px;
 
@@ -79,12 +80,6 @@
     }
 
 }
-
-
-
-
-
-
 
 /* letter animation */
 
@@ -124,11 +119,3 @@
         transform: scale(1.15, 0.85); 
     } 
 } 
-
-
-
-/* .primary:has(.icon) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */

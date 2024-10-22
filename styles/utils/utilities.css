@@ -38,12 +38,13 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* outline: 1px dashed orangered; */
 }
 
 html{
     scroll-behavior: smooth;
+    cursor: url('../../assets/cursor/cursor_normal.svg') 0 0, auto;
 }
-
 
 :root{
     /* colors */
@@ -88,7 +89,19 @@ html{
     /* spacing */
     --mt: 8rem;
     --pX: 3rem;
+
+    /* transition */
+    --trans-300ms: .3s;
+    --ease-in-out: ease-in-out;
 }
+
+::selection{
+    background-color: var(--accent);
+    color: var(--primary);
+}
+
+
+body::-webkit-scrollbar { display: none; }
 
 /* body */
 body{
@@ -97,7 +110,11 @@ body{
     color: var(--secondary);
     font: var(--fw-400) var(--text-sm) var(--ff-poppins);
     line-height: 1.5;
-    overflow-x:hidden;
+    overflow-x: hidden;
+}
+
+section{
+    overflow: hidden;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -135,6 +152,59 @@ img{
     color: var(--accent);
 }
 
+.active{
+    background-color: var(--accent);
+    color: var(--primary);
+}
+
+.active_link{
+    background-color: var(--accent);
+    color: var(--primary);
+}
+
+/* cursors */
+
+.cursor_click{
+    cursor: url('../../assets/cursor/cursor_search.svg') 0 0, auto;
+}
+
+.cursor_resize{
+    cursor: url('../../assets/cursor/cursor_resize.svg') 0 0, auto;
+}
+
+.cursor_link{
+    cursor: url('../../assets/cursor/cursor_link.svg') 0 0, auto;
+}
+
+.cursor_close{
+    cursor: url('../../assets/cursor/cursor_close.svg') 0 0, auto;
+}
+
+.cursor_target{
+    cursor: url('../../assets/cursor/cursor_target.svg') 0 0, auto;
+}
+
+.cursor_heart_lung{
+    cursor: url('../../assets/cursor/cursor_heart_lung.svg') 0 0, auto;
+}
+
+.cursor_search{
+    cursor: url('../../assets/cursor/cursor_search.svg') 0 0, auto;
+}
+
+.cursor_code{
+    cursor: url('../../assets/cursor/cursor_code.svg') 0 0, auto;
+}
+
+.cursor_pumpkin{
+    cursor: url('../../assets/cursor/cursor_pumpkin.svg') 0 0, auto;
+}
+
+.cursor_vomit{
+    cursor: url('../../assets/cursor/cursor_vomit2.svg') 0 0, auto;
+}
+
+
 
 /* buttons */
 
@@ -165,6 +235,4 @@ img{
     align-self: center;
 }
 
-
-/* education */
 

@@ -1,5 +1,3 @@
-@import '../utils/utilities.css';
-
 #about{
     position: relative;
     overflow-x: hidden;
@@ -8,9 +6,8 @@
 
 .about .grid-container{
     padding-inline: var(--pX);
-
     display: grid;
-    grid-template-columns: 1fr 20px;
+    grid-template-columns: 1fr 100px;
     align-items: center;
 }
 
@@ -23,10 +20,11 @@
 
 
 .about .about-infos{
-    margin-block: 3rem;
+    margin-block: 2rem 3rem;
     display: flex;
     align-self: center;
     justify-content: center;
+    gap: 2rem;
 }
 
 .about .about-infos .picture{
@@ -38,20 +36,31 @@
 }
 
 .about .about-infos .picture{
-    width: 300px;
-    height: 300px;
+    max-width: 400px;
+    max-height: 400px;
     align-self: center;
+
+    -webkit-mask-image: url(../../assets/background/mask-layer-shade.png);
+    -webkit-mask-size: auto 100%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+
+    mask-image: url(../../assets/background/mask-layer-shade.png);
+    mask-size: auto 100%;
+    mask-repeat: no-repeat;
+    mask-position: center;
 }
 
 
 .about .about-infos .picture img{
-    
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
 }
 
 .about .about-infos .hobbies{
     width: 90%;
 }
-
 
 .about .about-infos .description .name{
     font-size: var(--text-lg);
@@ -59,13 +68,14 @@
 
 .about .about-infos .description .hobby-title{
     font-size: var(--text-md);
-    margin-bottom: .5rem;
+    margin: 1rem 0 .5rem;
 }
 
 .about .about-infos .description .content{
     text-indent: 1.5rem;
     text-wrap: balance;
     margin-block: 1rem;
+    font-weight: var(--fw-400);
 }
 
 
@@ -75,108 +85,238 @@
     gap: 0.3rem;
 }
 
-.about .about-infos .hobby-title{
-    font-size: var(--text-sm);
+.about .about-infos .description .hobby-title{
+    font-size: 1.5rem;
 }
 
 .about .about-infos .hobbies a{
     background-color: var(--secondary);
-    font-size: var(--text-smallest);
+    font-size: 14px;
     padding: 0.5rem;
+    transition: var(--trans-300ms) var(--ease-in-out);
+}
+
+.about .about-infos .hobbies a:hover{
+    background-color: var(--accent);
+    color: var(--primary)
 }
 
 
 /* education */
 
-.about .grid-container .education a{
+.about .grid-container .education{
+    padding-right: var(--pX);
+}
+
+.about .grid-container .education button{
     transform: rotate(90deg);
+    border: none;
+    transition: var(--trans-300ms) var(--ease-in-out);
 }
 
-
-
-
-
-/* slider */
-
-
-/* banner */
-
-/* .slider{
-    margin-top: 8rem;
-    background: var(--secondary);
-    height: var(--height);
-    transform: rotate(7deg);
-    position:absolute;
-
-    -webkit-mask-image: linear-gradient(
-        to right,
-        transparent,
-        #000 10% 90%,
-        transparent
-    );
-
-    mask-image: linear-gradient(
-        to right,
-        transparent,
-        #000 10% 90%,
-        transparent
-    );
+.about .grid-container .education button:hover{
+    background-color: var(--accent);
+    color: var(--primary);
 }
 
-.slider .list{
-    display: flex;
-    width: 100vw;
-    position: relative;
-}
-
-.slider .list .item{
-    width: var(--width);
-    height: var(--height);
-    position: absolute;
-    right: 100%;
-    animation: autoRun 10s linear infinite;
-    animation-delay: calc((10s / var(--quantity)) * (var(--position) - 1) - 10s)!important;
-}
-
-.slider .list:hover .item{
-    animation-play-state: paused;
-}
-
-@keyframes autoRun{
-    from{
-        right: 100%;
-    }                     
-    to{
-        right: calc(var(--width) * -1);
-    }
-}
-/* for reverse */
-/*
-.slider[reverse="true"] .item{
-    animation: reversee 10s linear infinite;
-}
-
-@keyframes reversee{
-    from{
-        right: calc(var(--width) * -1);
-    } 
-    to{
-        right: 100%;
-    }
-}
-
-.slider:nth-child(2){
-    transform: rotate(-7deg);
-}
- */
-
-
-/* 
-.about .grid-container{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: auto;
+.bg-education-card-toggle{
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    background: rgba(203, 203, 203, .1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='192' height='192' viewBox='0 0 192 192'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M192 15v2a11 11 0 0 0-11 11c0 1.94 1.16 4.75 2.53 6.11l2.36 2.36a6.93 6.93 0 0 1 1.22 7.56l-.43.84a8.08 8.08 0 0 1-6.66 4.13H145v35.02a6.1 6.1 0 0 0 3.03 4.87l.84.43c1.58.79 4 .4 5.24-.85l2.36-2.36a12.04 12.04 0 0 1 7.51-3.11 13 13 0 1 1 .02 26 12 12 0 0 1-7.53-3.11l-2.36-2.36a4.93 4.93 0 0 0-5.24-.85l-.84.43a6.1 6.1 0 0 0-3.03 4.87V143h35.02a8.08 8.08 0 0 1 6.66 4.13l.43.84a6.91 6.91 0 0 1-1.22 7.56l-2.36 2.36A10.06 10.06 0 0 0 181 164a11 11 0 0 0 11 11v2a13 13 0 0 1-13-13 12 12 0 0 1 3.11-7.53l2.36-2.36a4.93 4.93 0 0 0 .85-5.24l-.43-.84a6.1 6.1 0 0 0-4.87-3.03H145v35.02a8.08 8.08 0 0 1-4.13 6.66l-.84.43a6.91 6.91 0 0 1-7.56-1.22l-2.36-2.36A10.06 10.06 0 0 0 124 181a11 11 0 0 0-11 11h-2a13 13 0 0 1 13-13c2.47 0 5.79 1.37 7.53 3.11l2.36 2.36a4.94 4.94 0 0 0 5.24.85l.84-.43a6.1 6.1 0 0 0 3.03-4.87V145h-35.02a8.08 8.08 0 0 1-6.66-4.13l-.43-.84a6.91 6.91 0 0 1 1.22-7.56l2.36-2.36A10.06 10.06 0 0 0 107 124a11 11 0 0 0-22 0c0 1.94 1.16 4.75 2.53 6.11l2.36 2.36a6.93 6.93 0 0 1 1.22 7.56l-.43.84a8.08 8.08 0 0 1-6.66 4.13H49v35.02a6.1 6.1 0 0 0 3.03 4.87l.84.43c1.58.79 4 .4 5.24-.85l2.36-2.36a12.04 12.04 0 0 1 7.51-3.11A13 13 0 0 1 81 192h-2a11 11 0 0 0-11-11c-1.94 0-4.75 1.16-6.11 2.53l-2.36 2.36a6.93 6.93 0 0 1-7.56 1.22l-.84-.43a8.08 8.08 0 0 1-4.13-6.66V145H11.98a6.1 6.1 0 0 0-4.87 3.03l-.43.84c-.79 1.58-.4 4 .85 5.24l2.36 2.36a12.04 12.04 0 0 1 3.11 7.51A13 13 0 0 1 0 177v-2a11 11 0 0 0 11-11c0-1.94-1.16-4.75-2.53-6.11l-2.36-2.36a6.93 6.93 0 0 1-1.22-7.56l.43-.84a8.08 8.08 0 0 1 6.66-4.13H47v-35.02a6.1 6.1 0 0 0-3.03-4.87l-.84-.43c-1.59-.8-4-.4-5.24.85l-2.36 2.36A12 12 0 0 1 28 109a13 13 0 1 1 0-26c2.47 0 5.79 1.37 7.53 3.11l2.36 2.36a4.94 4.94 0 0 0 5.24.85l.84-.43A6.1 6.1 0 0 0 47 84.02V49H11.98a8.08 8.08 0 0 1-6.66-4.13l-.43-.84a6.91 6.91 0 0 1 1.22-7.56l2.36-2.36A10.06 10.06 0 0 0 11 28 11 11 0 0 0 0 17v-2a13 13 0 0 1 13 13c0 2.47-1.37 5.79-3.11 7.53l-2.36 2.36a4.94 4.94 0 0 0-.85 5.24l.43.84A6.1 6.1 0 0 0 11.98 47H47V11.98a8.08 8.08 0 0 1 4.13-6.66l.84-.43a6.91 6.91 0 0 1 7.56 1.22l2.36 2.36A10.06 10.06 0 0 0 68 11 11 11 0 0 0 79 0h2a13 13 0 0 1-13 13 12 12 0 0 1-7.53-3.11l-2.36-2.36a4.93 4.93 0 0 0-5.24-.85l-.84.43A6.1 6.1 0 0 0 49 11.98V47h35.02a8.08 8.08 0 0 1 6.66 4.13l.43.84a6.91 6.91 0 0 1-1.22 7.56l-2.36 2.36A10.06 10.06 0 0 0 85 68a11 11 0 0 0 22 0c0-1.94-1.16-4.75-2.53-6.11l-2.36-2.36a6.93 6.93 0 0 1-1.22-7.56l.43-.84a8.08 8.08 0 0 1 6.66-4.13H143V11.98a6.1 6.1 0 0 0-3.03-4.87l-.84-.43c-1.59-.8-4-.4-5.24.85l-2.36 2.36A12 12 0 0 1 124 13a13 13 0 0 1-13-13h2a11 11 0 0 0 11 11c1.94 0 4.75-1.16 6.11-2.53l2.36-2.36a6.93 6.93 0 0 1 7.56-1.22l.84.43a8.08 8.08 0 0 1 4.13 6.66V47h35.02a6.1 6.1 0 0 0 4.87-3.03l.43-.84c.8-1.59.4-4-.85-5.24l-2.36-2.36A12 12 0 0 1 179 28a13 13 0 0 1 13-13zM84.02 143a6.1 6.1 0 0 0 4.87-3.03l.43-.84c.8-1.59.4-4-.85-5.24l-2.36-2.36A12 12 0 0 1 83 124a13 13 0 1 1 26 0c0 2.47-1.37 5.79-3.11 7.53l-2.36 2.36a4.94 4.94 0 0 0-.85 5.24l.43.84a6.1 6.1 0 0 0 4.87 3.03H143v-35.02a8.08 8.08 0 0 1 4.13-6.66l.84-.43a6.91 6.91 0 0 1 7.56 1.22l2.36 2.36A10.06 10.06 0 0 0 164 107a11 11 0 0 0 0-22c-1.94 0-4.75 1.16-6.11 2.53l-2.36 2.36a6.93 6.93 0 0 1-7.56 1.22l-.84-.43a8.08 8.08 0 0 1-4.13-6.66V49h-35.02a6.1 6.1 0 0 0-4.87 3.03l-.43.84c-.79 1.58-.4 4 .85 5.24l2.36 2.36a12.04 12.04 0 0 1 3.11 7.51A13 13 0 1 1 83 68a12 12 0 0 1 3.11-7.53l2.36-2.36a4.93 4.93 0 0 0 .85-5.24l-.43-.84A6.1 6.1 0 0 0 84.02 49H49v35.02a8.08 8.08 0 0 1-4.13 6.66l-.84.43a6.91 6.91 0 0 1-7.56-1.22l-2.36-2.36A10.06 10.06 0 0 0 28 85a11 11 0 0 0 0 22c1.94 0 4.75-1.16 6.11-2.53l2.36-2.36a6.93 6.93 0 0 1 7.56-1.22l.84.43a8.08 8.08 0 0 1 4.13 6.66V143h35.02z'%3E%3C/path%3E%3C/svg%3E");
     padding-inline: var(--pX);
 }
 
- */
+.education-toggle{
+    position: fixed;
+    z-index: 2000;
+    max-width: 80%;
+    height: 600px;
+    inset: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--secondary);
+    color: var(--primary);
+    border-radius: 1rem;
+    padding: var(--pX);
+    transition: var(--trans-300ms) var(--ease-in-out);
+}
+
+
+.education-toggle .title{
+    text-align: center;
+    font-size: var(--text-lg);
+    margin-bottom: 2rem;
+}
+
+.education-toggle .grid{
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.education-toggle .education{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.education-toggle .education .logo{
+    flex-basis: 30%;
+}
+
+.education-toggle .education .details{
+    flex-basis: 68%;
+}
+
+/* exit */
+.education-toggle .education-exit{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    height: 30px;
+    width: 30px;
+    padding: .5rem;
+    border-radius:  50%;
+    border: none;
+    background-color: var(--primary);
+}
+
+.education-toggle .education-exit img{
+    width: 100%;
+}
+
+/* media queries */
+
+@media screen and (max-width: 900px){
+
+    .about h2{
+        text-align: center;
+        padding: 0;
+    }
+
+   .education-toggle{
+        position: fixed;
+        z-index: 2000;
+        max-width: 95%;
+        height: max-content;
+    }
+
+    .about .grid-container{
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+
+    .about .about-infos{
+        flex-direction: column;
+    }
+
+    .about .about-infos .picture{
+        flex-basis: 100%;
+    }
+    
+    .about .about-infos .description{
+        width: 80%;
+        text-align: center;
+        margin-inline: auto;
+    }
+
+    /* hobbies */
+
+    .about .about-infos .description .hobbies .hobby-title{
+        margin-block: 5rem;
+    }
+
+    .about .about-infos .hobbies{
+        justify-content: center;
+        margin-inline: auto;
+    }
+
+    .about .about-infos .description .hobby-title{
+        margin: 1rem;
+    }
+
+    /* education */
+
+    .about .grid-container .education button{
+        transform: rotate(0deg);
+        font-size: 14px;
+    }
+
+
+
+
+    /* toggle */
+
+
+    .bg-education-card-toggle{
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .education-toggle .title{
+        text-align: center;
+        font-size: var(--text-lg);
+        margin-bottom: 2rem;
+    }
+
+    
+
+    
+
+    /* exit */
+    .education-toggle .education-exit{
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        height: 30px;
+        width: 30px;
+        padding: .5rem;
+        border-radius:  50%;
+        border: none;
+        background-color: var(--primary);
+    }
+
+    .education-toggle .education-exit img{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .about .about-infos .description{
+        width: 100%;
+    }  
+
+    /* toggle */
+
+    .education-toggle .grid{
+        display: grid;
+        place-items: left;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .education-toggle .education{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .education-toggle .education .logo{
+        width: 80px;
+        flex-basis: unset;
+    }
+
+    .education-toggle .education .details :where(p, h3){
+        font-size: var(--text-x-sm);
+    }
+}
