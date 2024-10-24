@@ -15,10 +15,11 @@
     font-weight: var(--fw-700);
 }
 
+
 .hero-section .hero-text .name{
     font-size: var(--text-big);
     font-weight: var(--fw-700);
-
+    font-family: var(--ff-poppins_x_bold);
     letter-spacing: -8px;
 }
 
@@ -37,6 +38,7 @@
 .hero-section .hero-text .name span:nth-child(5){
     margin-right: 15px;
 }
+
 
 
 

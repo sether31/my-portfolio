@@ -16,6 +16,7 @@
     font-size: var(--sec-header);
     margin-top: 1rem;
     padding-left: var(--pX);
+    font-family: var(--ff-poppins_bold);
 }
 
 
@@ -64,11 +65,13 @@
 
 .about .about-infos .description .name{
     font-size: var(--text-lg);
+    font-family: var(--ff-poppins_bold);
 }
 
 .about .about-infos .description .hobby-title{
-    font-size: var(--text-md);
+    font-size: 1.5rem;
     margin: 1rem 0 .5rem;
+    font-family: var(--ff-poppins_x_bold);
 }
 
 .about .about-infos .description .content{
@@ -85,9 +88,6 @@
     gap: 0.3rem;
 }
 
-.about .about-infos .description .hobby-title{
-    font-size: 1.5rem;
-}
 
 .about .about-infos .hobbies a{
     background-color: var(--secondary);

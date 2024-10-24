@@ -32,7 +32,7 @@ function renderHeroSection(){
         
         <!-- links -->
         <article class="cta" data-aos="fade-right" data-aos-duration="1800">
-            <a href="#" class="btn  primary-btn cursor_search">
+            <a href="https://youtu.be/dQw4w9WgXcQ?si=nyqmWF-HRO2g2aVb" class="btn primary-btn cursor_search" target="_blank">
                 <img src="./assets/icons/icon-resume.svg" alt="icon-resume" class="icon icon-resume">
                 Resume
             </a>

@@ -179,7 +179,7 @@ picture{
 
 .project-card-toggle .content h2{
     color: var(--primary);
-    font-size: var(--text-sm);
+    font-size: var(--text-lg);
     margin-block: 1.5rem .5rem;
 }
 

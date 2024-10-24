@@ -21,7 +21,7 @@ const educationData = [
         image: '../../assets/logo/jr_djymnhs_logo.png',
         what: 'High School',
         title: 'High School',
-        date: '2016 - 2021',
+        date: '2017 - 2021',
         where: 'Don jose Sr. Memorial National High School'
     },
     {
@@ -29,7 +29,7 @@ const educationData = [
         image: '../../assets/logo/tayuman_elementary_logo.png',
         what: 'Elementary',
         title: 'Elementary',
-        date: '2010 - 2016',
+        date: '2010 - 2017',
         where: 'Tayuman Elementary School'
     }
 ]

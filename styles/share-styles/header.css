@@ -35,6 +35,7 @@ header .container-lg nav .nav-link a{
     font-weight: var(--fw-600);
     letter-spacing: .15rem;
     transition: var(--trans-300ms) var(--ease-in-out);
+    font-family: var(--ff-poppins_semi);
 }
 
 header .container-lg nav .nav-link a:hover{

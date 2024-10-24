@@ -24,6 +24,7 @@
 .achievements .container-lg .wrapper :where(.skills .heading, .achievements .heading){
     margin-top: 2rem;
     font-size: var(--text-lg);
+    font-family: var(--ff-poppins_bold);
 }
 
 /* skills */
@@ -38,6 +39,7 @@
     margin-block: 1.5rem;
     font-size: var(--text-sm);
     font-weight: var(--fw-600);
+    font-family: var(--ff-poppins_semi);
 }
 
 .achievements .container-lg .wrapper .skills .card-item{
@@ -47,6 +49,7 @@
     justify-content: center;
     gap: .3rem;
     font-size: var(--text-xl-sm);
+    font-family: var(--ff-poppins_reg);
     background-color: var(--secondary);
     color: var(--primary);
     text-align: center;
@@ -80,6 +83,7 @@
     padding: .5rem 1rem;
     border-radius: 0.5rem;
     transition: var(--trans-300ms) var(--ease-in-out);
+    font-family: var(--ff-poppins_semi);
 }
 
 .achievements .container-lg .wrapper .awards nav ul li:hover{
@@ -127,13 +131,9 @@
     align-self: center;
 }
 
-/* .achievements .achievement-content .card .card-pic:hover img{
-    transition: .3s ease-in-out;
-    transform: rotate(-25deg);
-} */
-
 .achievements .achievement-content .card .title{
     font-weight: var(--fw-600);
+    font-family: var(--ff-poppins_semi);
 }
 
 
