@@ -15,9 +15,6 @@ const projects = [
                 name: 'CSS3'
             }
         },
-        techss: function(index){
-            return `projects.technologies.tech${1 + index}`
-        },
         githubLink: 'https://github.com/sether31/frontend-practice-challenge-ohstudio',
         liveLink: 'https://frontend-practice-challenge-ohstudio-sether31.vercel.app/',
         animationType: 'zoom-in-right',
@@ -83,6 +80,48 @@ const projects = [
         },
         githubLink: 'https://github.com/sether31/seth',
         liveLink: 'https://code-coworking-space.netlify.app/',
+        animationType: 'zoom-in-left',
+        animationDuration: '1500'
+    },
+    {
+        id: '5',
+        video: '../../assets/project/sunny-side-agency-landing-page/sunny-side-agency.mp4',
+        name: 'Sunny Side Agency Landing Page',
+        type: 'Landing Page',
+        description: 'A challenge from Frontend Mentor where i recreated a responsive landing page based on given Figma designs.',
+        technologies: {
+            tech1: {
+                icon: '../../assets/icons/html5_icon.svg',
+                name: 'HTML5'
+            },
+            tech2: {
+                icon: '../../assets/icons/CSS3_icon.svg',
+                name: 'CSS3'
+            }
+        },
+        githubLink: 'https://github.com/sether31/Frontend-Mentor-Challenges/tree/master/sunny-side-agency-master',
+        liveLink: 'https://sunny-side-agency-sether31.vercel.app/',
+        animationType: 'zoom-in-right',
+        animationDuration: '1500'
+    },
+    {
+        id: '6',
+        video: '../../assets/project/clipboard-landing-page/clipboard-landing-page.mp4',
+        name: 'Clipboard Landing Page',
+        type: 'Landing Page',
+        description: 'A challenge from Frontend Mentor where i recreated a responsive landing page based on given Figma designs.',
+        technologies: {
+            tech1: {
+                icon: '../../assets/icons/html5_icon.svg',
+                name: 'HTML5'
+            },
+            tech2: {
+                icon: '../../assets/icons/CSS3_icon.svg',
+                name: 'CSS3'
+            }
+        },
+        githubLink: 'https://github.com/sether31/Frontend-Mentor-Challenges/tree/master/clipboard-landing-page-master',
+        liveLink: 'https://clipboard-landing-page-sether31.vercel.app/',
         animationType: 'zoom-in-left',
         animationDuration: '1500'
     }

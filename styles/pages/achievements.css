@@ -321,7 +321,7 @@
 
 
 /* media queries */
-@media screen and (max-width: 900px){
+@media screen and (max-width: 1000px){
     :root{
         --pX: 2rem;
     }
@@ -531,5 +531,12 @@
         font-size: var(--text-x-sm);
         text-align: center;
     }
+    
 }
 
+
+@media screen and (max-width: 420px) {
+    .achievements .achievement-content .card a{
+        font-size: var(--text-xl-sm);
+    }
+}

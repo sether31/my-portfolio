@@ -44,7 +44,7 @@ header .container-lg nav .nav-link a:hover{
 }
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
     header nav{
         display: none;
     }
@@ -61,6 +61,10 @@ header .container-lg nav .nav-link a:hover{
         border-radius: 1rem;
         position: relative;
         transition: .3s ease;
+    }
+
+    #hamburger-toggle:hover span{
+        background-color: var(--accent);
     }
 
     #hamburger-toggle span{

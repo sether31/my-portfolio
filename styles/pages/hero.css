@@ -44,7 +44,7 @@
 
 /* media queries */
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
     .hero-section .hero-text .name{
         letter-spacing: -5px;
     }

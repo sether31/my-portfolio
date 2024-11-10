@@ -5,7 +5,7 @@ function renderContactSection(){
             Contacts&#92;&gt;
         </h2>
         <article class="grid-container">
-            <div class="contact-item" data-aos="zoom-out-right" data-aos-duration="500">
+            <div class="contact-item" data-aos="zoom-out-right" data-aos-duration="1000">
                 <div class="picture">
                     <img src="./assets/icons/github_icon _black.svg" alt="guthub_icon">
                 </div>
@@ -47,7 +47,7 @@ function renderContactSection(){
                 </div>
             </div>
 
-            <div class="contact-item" data-aos="zoom-out-left" data-aos-duration="2000">
+            <div class="contact-item" data-aos="zoom-out-left" data-aos-duration="1500">
                 <div class="picture">
                     <img src="./assets/icons/front_end_mentor_icon.svg" alt="frontendmentor_logo">
                 </div>

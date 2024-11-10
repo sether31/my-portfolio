@@ -24,7 +24,7 @@
     margin-block: 2rem 3rem;
     display: flex;
     align-self: center;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 2rem;
 }
 
@@ -194,7 +194,7 @@
 
 /* media queries */
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 1000px){
 
     .about h2{
         text-align: center;
@@ -266,9 +266,6 @@
         font-size: var(--text-lg);
         margin-bottom: 2rem;
     }
-
-    
-
     
 
     /* exit */
